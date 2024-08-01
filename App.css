@@ -1,0 +1,51 @@
+.app{
+  background-color: #8d9c77;
+  min-height: 100vh;
+}
+/* Styles for the entire app */
+.app {
+  font-family: Arial, sans-serif;
+  background-color: #a5d6a7; /* Light green background color for the page */
+  min-height: 100vh; /* Ensure the background covers the full viewport height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Header styles */
+.header {
+  background-color: #004d40; /* Darker green background for header */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect for header */
+}
+
+/* Heading styles */
+.header-title {
+  color: #e0f2f1; /* Light green text color */
+  font-size: 2.5em;
+  margin: 0;
+  text-transform: uppercase; /* Uppercase text for emphasis */
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+}
+
+/* Heading effect */
+.header-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px; /* Position the underline below the text */
+  width: 100%;
+  height: 5px;
+  background: #e0f2f1; /* Same color as text for underline */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for the underline */
+  transform: scaleX(0); /* Initially hidden */
+  transform-origin: bottom right; /* Animation origin */
+  transition: transform 0.3s ease; /* Smooth transition for underline effect */
+}
+
+.header-title:hover::before {
+  transform: scaleX(1); /* Show underline on hover */
+  transform-origin: bottom left; /* Animation direction on hover */
+}

@@ -1,0 +1,60 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    margin: 10px;
+    width: 200px;
+    overflow: hidden;
+    background-color: #e0f2f1; /* Bluish-green background */
+    position: relative; /* Required for absolute positioning of button */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+  }
+  
+  /* Scaling and shadow effect on hover */
+  .card:hover {
+    transform: scale(1.05); /* Slightly scale up the card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow effect on hover */
+  }
+  
+  /* Styling for the image inside the card */
+  .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  /* Styling for the card body */
+  .card-body {
+    padding: 10px;
+    text-align: center;
+    position: relative; /* Required for absolute positioning of button container */
+  }
+  
+  /* Styling for the button container */
+  .button-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    opacity: 0; /* Hide button by default */
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Styling for the button */
+  .contact-button {
+    background-color: #00796b; /* Darker green background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+  
+  /* Show button on hover */
+  .card:hover .button-container {
+    opacity: 1; /* Show button on card hover */
+  }
